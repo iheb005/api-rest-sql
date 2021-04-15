@@ -12,11 +12,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // simple route
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to rest_api application." });
+  
 });
 
-require("./app/routes/users.route.js")(app);
+require("./app/routes/users.route.js");
+//(app);
+
 
 // set port, listen for requests
-app.listen(3000, () => {
-  console.log("Server is running on port 3000.");
+app.listen(8001, () => {
+  console.log("Server is running on port 8001.");
 });
