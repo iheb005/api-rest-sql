@@ -3,8 +3,5 @@ module.exports = {
     USER: "root",
     PASSWORD: "",
     DB: "testdb",
-    options: {
-      truestedConnection: true,
-      instanceName: 'SQLEXPRESS'
- }
+    
   };
