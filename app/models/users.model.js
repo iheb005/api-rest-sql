@@ -41,11 +41,11 @@ user.findByID = (userID, result) => {
 };
 
 user.getAll = result =>{
+    if(err){
+        console.log("error:",err);
+        result(null,err);
+    }
     sql.query("select * from users", (err,res) => {
-        if(err){
-            console.log("error:",err);
-            result(null,err);
-        }
         console.log("users: ", err );
         result(null,res);
     });
